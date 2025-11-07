@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Oriecon">
+      <UniqueIdentifier>{B49789D6-2077-0872-298F-934895ED6ED3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Oriecon\Events">
+      <UniqueIdentifier>{1811B9C0-04DF-ACC6-ED72-1DEDD9DF882B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Oriecon.h" />
+    <ClInclude Include="src\Oriecon\Application.h">
+      <Filter>Oriecon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Oriecon\Core.h">
+      <Filter>Oriecon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Oriecon\EntryPoint.h">
+      <Filter>Oriecon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Oriecon\Events\ApplicationEvent.h">
+      <Filter>Oriecon\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Oriecon\Events\Event.h">
+      <Filter>Oriecon\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Oriecon\Events\KeyEvent.h">
+      <Filter>Oriecon\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Oriecon\Events\MouseEvent.h">
+      <Filter>Oriecon\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Oriecon\Layer.h">
+      <Filter>Oriecon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Oriecon\LayerStack.h">
+      <Filter>Oriecon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Oriecon\Log.h">
+      <Filter>Oriecon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Oriecon\Window.h">
+      <Filter>Oriecon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Oriecon\Application.cpp">
+      <Filter>Oriecon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Oriecon\Layer.cpp">
+      <Filter>Oriecon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Oriecon\LayerStack.cpp">
+      <Filter>Oriecon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Oriecon\Log.cpp">
+      <Filter>Oriecon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pch.cpp" />
+  </ItemGroup>
+</Project>
