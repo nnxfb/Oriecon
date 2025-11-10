@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Core.h"
-#include "Events/Event.h"
+#include "Oriecon/Core.h"
+#include "Oriecon/Events/Event.h"
 
 namespace Oriecon
 {

@@ -1,3 +1,6 @@
 [submodule "Oriecon/vendor/spdlog"]
 	path = Oriecon/vendor/spdlog
 	url = git@github.com:gabime/spdlog.git
+[submodule "Oriecon/vendor/ImGui"]
+	path = Oriecon/vendor/ImGui
+	url = git@github.com:ocornut/imgui.git

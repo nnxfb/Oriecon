@@ -9,7 +9,7 @@ namespace Oriecon
 		None = 0,
 		WindowCreate, WindowClose, WindowFocus, WindowLoseFocus, WindowResize, WindowMove,
 		AppTick, AppUpdate, AppRender,
-		KeyDown, KeyUp,
+		KeyDown, KeyUp, KeyType,
 		MousePress, MouseRelease, MouseMove, MouseScroll,
 	};
 

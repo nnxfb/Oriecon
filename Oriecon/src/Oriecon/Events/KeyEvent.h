@@ -40,6 +40,23 @@ namespace Oriecon
 		unsigned int m_RepeatCount = 0;
 	};
 
+	class ORIECON_API KeyTypeEvent : public KeyEvent
+	{
+	public:
+		CLASS_EVENT_TYPE(KeyType);
+
+		KeyTypeEvent(int keycode)
+			: KeyEvent(keycode) {}
+
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "Key typed: " << m_KeyCode;
+			return ss.str();
+		}
+	};
+
 	class ORIECON_API KeyUpEvent : public KeyEvent
 	{
 	public:

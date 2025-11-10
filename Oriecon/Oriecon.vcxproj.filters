@@ -7,8 +7,14 @@
     <Filter Include="Oriecon\Events">
       <UniqueIdentifier>{1811B9C0-04DF-ACC6-ED72-1DEDD9DF882B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Oriecon\Layer">
+      <UniqueIdentifier>{808B4A06-EC4B-C63C-B586-0FBA21060B19}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
@@ -37,17 +43,29 @@
     <ClInclude Include="src\Oriecon\Events\MouseEvent.h">
       <Filter>Oriecon\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Oriecon\Layer.h">
-      <Filter>Oriecon</Filter>
+    <ClInclude Include="src\Oriecon\Layer\ImGuiLayer.h">
+      <Filter>Oriecon\Layer</Filter>
     </ClInclude>
-    <ClInclude Include="src\Oriecon\LayerStack.h">
-      <Filter>Oriecon</Filter>
+    <ClInclude Include="src\Oriecon\Layer\Layer.h">
+      <Filter>Oriecon\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Oriecon\Layer\LayerStack.h">
+      <Filter>Oriecon\Layer</Filter>
     </ClInclude>
     <ClInclude Include="src\Oriecon\Log.h">
       <Filter>Oriecon</Filter>
     </ClInclude>
     <ClInclude Include="src\Oriecon\Window.h">
       <Filter>Oriecon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\imgui_impl_glfw.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h">
+      <Filter>Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
@@ -58,14 +76,23 @@
     <ClCompile Include="src\Oriecon\Application.cpp">
       <Filter>Oriecon</Filter>
     </ClCompile>
-    <ClCompile Include="src\Oriecon\Layer.cpp">
-      <Filter>Oriecon</Filter>
+    <ClCompile Include="src\Oriecon\Layer\ImGuiLayer.cpp">
+      <Filter>Oriecon\Layer</Filter>
     </ClCompile>
-    <ClCompile Include="src\Oriecon\LayerStack.cpp">
-      <Filter>Oriecon</Filter>
+    <ClCompile Include="src\Oriecon\Layer\Layer.cpp">
+      <Filter>Oriecon\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Oriecon\Layer\LayerStack.cpp">
+      <Filter>Oriecon\Layer</Filter>
     </ClCompile>
     <ClCompile Include="src\Oriecon\Log.cpp">
       <Filter>Oriecon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\imgui_impl_glfw.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\imgui_impl_opengl3.cpp">
+      <Filter>Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>

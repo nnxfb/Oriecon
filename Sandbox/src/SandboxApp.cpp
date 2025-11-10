@@ -18,6 +18,7 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Oriecon::ImGuiLayer());
 	}
 	~Sandbox() {}
 

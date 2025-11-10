@@ -32,6 +32,8 @@ namespace Oriecon
 
 	void WindowsWindow::Init(const WindowProps& props)
 	{
+		int success;
+
 		m_Data.Title = props.Title;
 		m_Data.Width = props.Width;
 		m_Data.Height = props.Height;
@@ -40,16 +42,20 @@ namespace Oriecon
 
 		if (!s_WindowInitialized)
 		{
-			int success = glfwInit();
-			ORIECON_ASSERT(success, "Window initialization failed!");
+			success = glfwInit();
+			ORIECON_ASSERT(success, "glfw initialization failed!");
 			glfwSetErrorCallback(GLFWErrorFunction);
 			s_WindowInitialized = true;
 		}
 
-		ORIECON_LOG_INFO("Window initialized!");
+		ORIECON_LOG_INFO("glfw initialized!");
 
 		m_Window = glfwCreateWindow(m_Data.Width, m_Data.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		success = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		ORIECON_ASSERT(success, "glad initialization failed!");
+		ORIECON_LOG_INFO("glad initialized!");
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
@@ -91,6 +97,16 @@ namespace Oriecon
 					break;
 				}
 			}
+		});
+
+		ORIECON_LOG_DEBUG("Setting key type callback...");
+
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int codepoint)
+		{
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+
+			KeyTypeEvent event(codepoint);
+			data.EventCallback(event);
 		});
 
 		ORIECON_LOG_DEBUG("Setting mouse move callback...");

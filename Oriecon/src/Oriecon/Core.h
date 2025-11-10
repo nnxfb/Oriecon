@@ -19,3 +19,5 @@
 #else
 #define ORIECON_ASSERT(expr, ...)
 #endif
+
+#define BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)

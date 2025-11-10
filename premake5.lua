@@ -4,8 +4,8 @@ workspace "Oriecon"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-GLFWDir = ""
-GladDir = "Oriecon/vendor/Glad"
+include "Oriecon/vendor/Glad"
+include "Oriecon/vendor/ImGui"
 
 project "Oriecon"
 	location "Oriecon"
@@ -24,7 +24,9 @@ project "Oriecon"
 	links
 	{
 		"glfw3",
+		"glad",
 		"opengl32",
+		"ImGui"
 	}
 	
 	files
@@ -38,6 +40,8 @@ project "Oriecon"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/vendor/GLFW/include",
+		"%{prj.name}/vendor/Glad/include",
+		"%{prj.name}/vendor/ImGui",
 	}
 
 	filter "system:windows"
@@ -98,7 +102,8 @@ project "Sandbox"
 	includedirs
 	{
 		"Oriecon/src",
-		"Oriecon/vendor/spdlog/include"
+		"Oriecon/vendor/spdlog/include",
+		"Oriecon/vendor/ImGui",
 	}
 
 	filter "system:windows"

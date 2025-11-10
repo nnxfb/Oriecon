@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Core.h"
-#include "Layer.h"
+#include "Oriecon/Core.h"
+#include "Oriecon/Layer/Layer.h"
 
 namespace Oriecon
 {
